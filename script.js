@@ -28,3 +28,8 @@ function run1() {
         spot += 10;
         wolves[0].style.left = spot + "px";
     }
+
+    function run2() {
+        if(spot >= 1140){
+            clearInterval(time);
+        }
