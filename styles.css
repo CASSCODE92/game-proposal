@@ -1,14 +1,11 @@
-body {
-    background-color: #0d4a1c;
-    justify-items: center;
-    display: grid;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-}
 
+#forrest {
+    background-color: #044a17;
+    height: 600px;
+    width: 1200px;
+    position: relative;
+    border: 2px solid black;
+}
 
 html {
     height: 100%;
