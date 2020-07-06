@@ -19,3 +19,8 @@ wolves[5].style.left = 1140 + "px";
 var spot = 0;
 
 var time = setInterval(run1h, 500);
+
+function run1() {
+    if(spot >= 1140){
+        clearInterval(time);
+    }
