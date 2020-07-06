@@ -10,3 +10,8 @@ wolves[2].style.top = 210 + "px";
 
 wolves[3].style.top = 280 + "px";
 wolves[3].style.left = 1140 + "px";
+
+wolves[4].style.top = 350 + "px";
+
+wolves[5].style.top = 420 + "px";
+wolves[5].style.left = 1140 + "px";
