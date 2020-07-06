@@ -1,4 +1,2 @@
-Player
 
-
-square = {}
+var wolves = document.getElementsByClassName("wolves");
