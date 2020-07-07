@@ -3,6 +3,8 @@ window.onload = alert("Press space bar to travel to grandma's house and avoid th
 var player = document.getElementById("player");
 var wolves = document.getElementsByClassName("wolves");
 
+player.style.top = 540 + "px"; player.style.left = 625 + "px";
+
 wolves[0].style.top = 70 + "px";
  
 wolves[1].style.top = 140 + "px";
