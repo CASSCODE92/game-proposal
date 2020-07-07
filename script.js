@@ -102,7 +102,7 @@ function run5() {
     }
 }
 
-//collision detection
+//box collision detection
 var playerBox = {pl: player.style.left, pt: player.style.top, width: 50, height: 50};
 var wolvesBox = {wl: wolves.style.left, wt: wolves.style.top, width: 50, height: 50};
 
