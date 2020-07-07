@@ -1,4 +1,4 @@
-window.onload = alert("Press space bar to travel to grandma's house and avoid the grey wolves. Good luck!");
+window.onload = alert("Use the arrow keys to navigate to grandma's house and avoid the gray wolves. Good luck!");
 
 var player = document.getElementById("player");
 var wolves = document.getElementsByClassName("wolves");
@@ -31,6 +31,7 @@ var w5 = setInterval(run5, 10);
 
 var spot = 0;
 var spot1 = 1140;
+
 
 
 
