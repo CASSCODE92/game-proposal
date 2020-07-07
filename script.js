@@ -24,6 +24,7 @@ var w0 = setInterval(run0, 10);
 var w2 = setInterval(run2, 10);
 var w4 = setInterval(run4, 10);
 
+var w1 = setInterval(run1, 10);
 var spot = 0;
 var spot1 = 1140;
 
