@@ -1,4 +1,4 @@
-//Player Directions
+//Player Direction
 window.onload = alert("Use the arrow keys to navigate to grandma's house and avoid the gray wolves. Good luck!");
 
 //Attach DOM Elements
