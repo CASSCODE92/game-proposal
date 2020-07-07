@@ -21,6 +21,7 @@ wolves[5].style.top = 420 + "px";
 wolves[5].style.left = 1140 + "px";
 
 var spot = 0;
+var spot1 = 1140;
 
 var time = setInterval(run1h, 500);
 
