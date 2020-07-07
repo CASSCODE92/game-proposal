@@ -1,4 +1,6 @@
+window.onload = alert("Press space bar to travel to grandma's house and avoid the grey wolves. Good luck!");
 
+var player = document.getElementById("player");
 var wolves = document.getElementsByClassName("wolves");
 
 wolves[0].style.top = 70 + "px";
