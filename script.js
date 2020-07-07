@@ -32,24 +32,80 @@ var w5 = setInterval(run5, 10);
 var spot = 0;
 var spot1 = 1140;
 
-var time = setInterval(run1h, 500);
 
-function run1() {
+
+//wolves on the left side
+function run0() {
     if(spot >= 1140){
-        clearInterval(time);
+        clearInterval(w0);
     }
     else {
-        spot += 10;
+        spot += 1;
         wolves[0].style.left = spot + "px";
     }
+}
 
-    function run2() {
-        if(spot >= 1140){
-            clearInterval(time);
-        }
-        else {
-            spot += 10;
-            wolves[0].style.left = spot + "px";
-        }
+function run2() {
+    if(spot >= 1140){
+        clearInterval(w2);
     }
-    
+    else {
+        spot += 1;
+        wolves[2].style.left = spot + "px";
+    }
+}
+
+function run4() {
+    if(spot >= 1140){
+        clearInterval(w4);
+    }
+    else {
+        spot += 1;
+        wolves[4].style.left = spot + "px";
+    }
+}
+
+
+//wolves on right side
+function run1() {
+    if(spot1 <= 0){
+        clearInterval(w1);
+    }
+    else {
+        spot1 -= 1;
+        wolves[1].style.left = spot1 + "px";
+    }
+}
+
+function run3() {
+    if(spot1 <= 0){
+        clearInterval(w3);
+    }
+    else {
+        spot1 -= 1;
+        wolves[3].style.left = spot1 + "px";
+    }
+}
+
+function run5() {
+    if(spot1 <= 0){
+        clearInterval(w5);
+    }
+    else {
+        spot1 -= 1;
+        wolves[5].style.left = spot1 + "px";
+    }
+}
+
+
+var playerBox = {pl: player.style.left, pt: player.style.top, width: 50, height: 50};
+var wolvesBox = {wl: wolves.style.left, wt: wolves.style.top, width: 50, height: 50};
+
+function collide() {
+if(playerBox.pl < wolvesBox.wl + wolvesBox.width && playerBox.pl + playerBox.width > wolvesBox.wl && playerBox.pt < wolvesBox.wt + wolvesBox.height && playerBox.pt + playerBox.height > wolvesBox.wt) {
+        alert("plan A");
+    } 
+    else {
+        alert("plan B");
+    }
+};
