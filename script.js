@@ -5,7 +5,7 @@ window.onload = alert("Use the arrow keys to navigate to grandma's house and avo
 var player = document.getElementById("player");
 var wolves = document.getElementsByClassName("wolves");
 
-//position player and wolves boxes
+//position player(Little Red Riding Hood) and wolves boxes
 player.style.top = 540 + "px"; player.style.left = 625 + "px";
 
 wolves[0].style.top = 70 + "px";
