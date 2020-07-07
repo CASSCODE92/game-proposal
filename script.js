@@ -1,8 +1,11 @@
+//Player Directions
 window.onload = alert("Use the arrow keys to navigate to grandma's house and avoid the gray wolves. Good luck!");
 
+//Attach DOM elements
 var player = document.getElementById("player");
 var wolves = document.getElementsByClassName("wolves");
 
+//position player and wolves boxes
 player.style.top = 540 + "px"; player.style.left = 625 + "px";
 
 wolves[0].style.top = 70 + "px";
@@ -20,22 +23,23 @@ wolves[4].style.top = 350 + "px";
 wolves[5].style.top = 420 + "px";
 wolves[5].style.left = 1140 + "px";
 
-
+//timer for left wolves
 var w0 = setInterval(run0, 10);
 var w2 = setInterval(run2, 10);
 var w4 = setInterval(run4, 10);
-
+//timer for right wolves
 var w1 = setInterval(run1, 10);
 var w3 = setInterval(run3, 10);
 var w5 = setInterval(run5, 10);
 
+//Declare box's position
 var spot = 0;
 var spot1 = 1140;
 
 
 
 
-//wolves on the left side
+//move wolves on the left side to the right
 function run0() {
     if(spot >= 1140){
         clearInterval(w0);
@@ -67,7 +71,7 @@ function run4() {
 }
 
 
-//wolves on right side
+//move wolves on right side to the left
 function run1() {
     if(spot1 <= 0){
         clearInterval(w1);
@@ -98,7 +102,7 @@ function run5() {
     }
 }
 
-
+//collision detection
 var playerBox = {pl: player.style.left, pt: player.style.top, width: 50, height: 50};
 var wolvesBox = {wl: wolves.style.left, wt: wolves.style.top, width: 50, height: 50};
 
