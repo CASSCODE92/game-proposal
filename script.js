@@ -46,6 +46,7 @@ wolves[5].style.top = 420 + "px";
 wolves[5].style.left = 1140 + "px";
 
 //timer for left wolves
+//Parameters (function,time value in milliseconds)
 var w0 = setInterval(run0, 300);
 var w2 = setInterval(run2, 1000);
 var w4 = setInterval(run4, 500);
@@ -56,21 +57,26 @@ var w5 = setInterval(run5, 2000);
 // setInterval(function(){ alert("Hello"); }, 3000);
 //Declare box's position
 var spot = 0;
-var spot1 = 1140;
+// var spot1 = 1140; 
 
 
 
 
 //move wolves on the left side to the right
+// if spot DOES NOT equal 0, take spot and SUBTRACT 5
 function run0() {
     if (spot != 0) {
         spot -= 5;
         wolves[0].style.left = spot + "px";
+        // left side of box will move 5 pixels to left
+        // concactinating (or combining) the number with the pixels
     } 
     else if (spot == 0) {
         while (spot <= 1140) {
             spot += 15;
             wolves[0].style.left = spot + "px";
+            // while the value of spot is less than or equal to 1140, add 15 pixels 
+            // to the left to make it push to the right
         }
     }
 }
@@ -209,6 +215,7 @@ function distance(point1, point2) {
 
 
 function collide() {
+    // testing functionality with alerts
     if (playerBox.pl < wolvesBox.wl + wolvesBox.width && playerBox.pl + playerBox.width > wolvesBox.wl && playerBox.pt < wolvesBox.wt + wolvesBox.height && playerBox.pt + playerBox.height > wolvesBox.wt) {
         alert("plan A");
     } else {
@@ -217,18 +224,20 @@ function collide() {
 };
 
 
+
 var spot2 = 540;
 
-function movePlayer() {
-    if (spot2 <= 0) {
-        return alert("?");
-    } else {
-        spot2 -= 1;
-        player.style.top = spot2 + "px";
-    }
-}
+// function movePlayer() {
+//     if (spot2 <= 0) {
+//         return alert("?");
+//     } else {
+//         spot2 -= 1;
+//         player.style.top = spot2 + "px";
+//     }
+// }
 //player.addEventListener("click", movePlayer());
 
+//  () => {   -is a function (eS6)
 let playerRed = null;
 let init = () => {
     playerRed = document.getElementById("player");
@@ -238,7 +247,7 @@ let init = () => {
 }
 
 
-
+// switch statement from w3 schools
 document.onkeydown = function (event) {
     switch (event.key) {
         case 'ArrowUp':
@@ -265,6 +274,7 @@ document.onkeydown = function (event) {
 
     }
 }
+
 
 function moveLeft() {
     playerRed.style.left = parseInt(playerRed.style.left) - 5 + 'px';
